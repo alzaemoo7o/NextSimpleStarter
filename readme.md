@@ -4,44 +4,70 @@
 <h3 align="center">Simple NextJS PWA boilerplate.</h3></p>
 </p>
 
-## Contents
 
-- [Installation](#installation)
-- [Development Workflow](#development-workflow)
-- [Deployment](#deployment)
 
-### Installation
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/NextSimpleStarter)
+An AMP HTML tutorial - learn the different building blocks of an AMP HTML file. AMP HTML is entirely built on existing web technologies. It achieves reliable performance by restricting some parts of HTML, CSS and JavaScript. To make up for those limitations AMP HTML defines a set of custom elements for rich content beyond basic HTML. This samples shows what's necessary to create a valid AMP HTML file.
+-->
+<!-- -->
+<!-- Doctype declaration is required. -->
+<!doctype html>
+<!-- This tells everyone that this is an AMP file. `<html amp>` works too. -->
+<html ⚡ lang="en">
+<!-- ## Head -->
+<!-- -->
+<head>
+  <!-- The charset definition must be the first child of the `<head>` tag. -->
+  <meta charset="utf-8">
+  <title> Hello World</title>
+  <!-- The AMP runtime must be loaded as the second child of the `<head>` tag.-->
+  <script>
+	
+<head>
+  <!-- The charset definition must be the first child of the `<head>` tag. -->
+  <meta charset="utf-8">
+  <title> Hello World</title>
+  <!-- The AMP runtime must be loaded as the second child of the `<head>` tag.-->
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <!--
+    AMP HTML files require a canonical link pointing to the regular HTML. If no HTML version exists, it should point to itself.
+  -->
+  <link rel="canonical" href="https://amp.dev/documentation/examples/introduction/hello_world/index.html">
+  <!--
+    AMP HTML files require a viewport declaration. It's recommended to include initial-scale=1.
+  -->
+  <meta name="viewport" content="width=device-width">
+  <!--
+    CSS must be embedded inline.
+  -->
+  <style amp-custom>
+    h1 {
+      color: red;
+    }
+  </style>
+  <!--
+    The AMP boilerplate.
+  -->
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+<!-- ## Body -->
+<!-- -->
+<body>
+  <!--
+    Most HTML tags can be used directly in AMP HTML.
+  -->
+  <h1>Hello World!</h1>
+  <!--
+    Certain tags, such as the `<img>` tag, are replaced with equivalent or slightly enhanced custom AMP HTML tags (see [HTML Tags in the specification](https://github.com/ampproject/amphtml/blob/master/spec/amp-html-format.md)). You can use the [AMP Validator](/documentation/guides-and-tutorials/learn/validation-workflow/validate_amp) to check
+    if your AMP HTML file is valid AMP HTML. Simply add `#development=1` to an AMP URL. Validation errors will be printed in the Javascript console. You can try it with this website which is built with AMP.
 
-### Development Workflow
-Start a live-reload development server:
-```sh
-yarn dev
-```
-or
-```sh
-npm run dev
-```
+    Check out the [other examples](/documentation/examples/) to learn more about AMP.
+  -->
+  <amp-img src="https://preview.amp.dev/static/samples/img/amp.jpg" width="1080" height="610" layout="responsive"></amp-img>
 
-Generate a production build:
-```sh
-yarn build
-```
-or
-```sh
-npm run build
-```
-### Deployment
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/ooade/NextSimpleStarter)
-
-<details>
-	<summary>heroku</summary>
-	Just follow <a href="https://github.com/mars/heroku-nextjs">Mars's Guide</a> and you're good to go :clap:
-</details>
-
-### Contribution
-I'm open to contributions & suggestions in making this a lot better :hand:
-
-### License
-MIT
+</body>
+</html>
+<html>
+<html amp lang="en">
+  <head>
+   <head>	
